@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #121212;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    background: linear-gradient(45deg, #4CAF50, #83ff87);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(76, 175, 80, 0.8),
+                     0 0 30px rgba(76, 175, 80, 0.6);
+    }
+}
+
+.title {
+    color: #4CAF50;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.2);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #4CAF50, transparent);
+}
+
+ul {
+    list-style: none;
+}
+
+.hover-effect {
+    transition: transform 0.2s ease, color 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hover-effect:hover {
+    transform: translateX(10px) scale(1.02);
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.15);
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+.hobby-list, .car-list {
+    padding: 1rem 0;
+}
+
+.hobby-list li, .car-list li {
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(76, 175, 80, 0.1);
+}
+
+.car-interests {
+    margin-top: 1rem;
+}
+
+.car-interests p {
+    color: #bbb;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Animation durations */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+}
+
+.contact li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0;
+    margin-bottom: 8px;
+}
+
+.contact li:hover {
+    transform: translateX(10px) scale(1.02);
+    background: rgba(76, 175, 80, 0.15);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* Style for the emojis in contact section */
+.contact li::before {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.contact li:hover::before {
+    transform: scale(1.2);
+}
+
+.contact a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    padding: 8px;
+}
+
+.contact li:hover a {
+    color: #4CAF50;
+} 
